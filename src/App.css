@@ -1,0 +1,30 @@
+#root {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  #root {
+    padding: 10px;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+}
+
+button {
+  background-color: #c2185b;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #ad1457;
+}
