@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import mensajes from './data/mensajes'
 import Calculadoras from './pages/calculadoras'
@@ -34,7 +34,7 @@ function App() {
   const mensajeAleatorio = mensajes[Math.floor(Math.random() * mensajes.length)].replace('{nombre}', nombre)
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar />
       <div style={{ padding: '1rem' }}>
         <Routes>
@@ -44,7 +44,7 @@ function App() {
           <Route path="/medicamentos" element={<h2>Medicamentos — próximamente</h2>} />
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
