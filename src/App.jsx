@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { HashRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import mensajes from './data/mensajes'
 import Calculadoras from './pages/calculadoras'
 import Navbar from './components/navbar'
+import Home from './pages/Home'
 
 function App() {
   const [nombre, setNombre] = useState(localStorage.getItem('nombre') || '')
@@ -31,17 +31,19 @@ function App() {
     )
   }
 
-  const mensajeAleatorio = mensajes[Math.floor(Math.random() * mensajes.length)].replace('{nombre}', nombre)
-
   return (
     <HashRouter>
       <Navbar />
       <div style={{ padding: '1rem' }}>
         <Routes>
-          <Route path="/" element={<h1>{mensajeAleatorio}</h1>} />
+          <Route path="/" element={<Home nombre={nombre} />} />
           <Route path="/calculadoras" element={<Calculadoras />} />
-          <Route path="/checklists" element={<h2>Checklists — próximamente</h2>} />
           <Route path="/medicamentos" element={<h2>Medicamentos — próximamente</h2>} />
+          <Route path="/checklists" element={<h2>Checklists — próximamente</h2>} />
+          <Route path="/uego" element={<h2>UEGO — próximamente</h2>} />
+          <Route path="/cesfam" element={<h2>CESFAM — próximamente</h2>} />
+          <Route path="/aro" element={<h2>ARO — próximamente</h2>} />
+          <Route path="/simuv" element={<h2>SIMUV — próximamente</h2>} />
         </Routes>
       </div>
     </HashRouter>

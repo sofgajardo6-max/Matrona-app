@@ -17,26 +17,28 @@ function Navbar() {
       </div>
 
       {abierto && (
-  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginTop: '1rem' }}>
-    {[
-      { to: '/', label: '🏠 Inicio' },
-      { to: '/calculadoras', label: '🧮 Calculadoras' },
-      { to: '/checklists', label: '✅ Checklists' },
-      { to: '/medicamentos', label: '💊 Medicamentos' },
-    ].map(({ to, label }) => (
-      <Link
-        key={to}
-        to={to}
-        onClick={() => setAbierto(false)}
-        style={{ color: 'white', textDecoration: 'none', padding: '4px 8px', borderRadius: '6px' }}
-        onMouseEnter={e => e.target.style.backgroundColor = '#ad1457'}
-        onMouseLeave={e => e.target.style.backgroundColor = 'transparent'}
-      >
-        {label}
-      </Link>
-    ))}
-  </div>
-)}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginTop: '1rem' }}>
+          {[
+            { to: '/', label: '🏠 Inicio' },
+            { to: '/checklists', label: '✅ Checklists' },
+            { to: '/uego', label: '🚨 UEGO' },
+            { to: '/cesfam', label: '🏥 CESFAM' },
+            { to: '/aro', label: '⚠️ ARO' },
+            { to: '/simuv', label: '📋 SIMUV' },
+          ].map(({ to, label }) => (
+            <Link
+              key={to}
+              to={to}
+              onClick={() => setAbierto(false)}
+              style={{ color: 'white', textDecoration: 'none', padding: '4px 8px', borderRadius: '6px' }}
+              onMouseEnter={e => e.target.style.backgroundColor = '#ad1457'}
+              onMouseLeave={e => e.target.style.backgroundColor = 'transparent'}
+            >
+              {label}
+            </Link>
+          ))}
+        </div>
+      )}
     </nav>
   )
 }
