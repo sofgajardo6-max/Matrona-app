@@ -44,6 +44,7 @@ function App() {
           <Route path="/cesfam" element={<h2>CESFAM — próximamente</h2>} />
           <Route path="/aro" element={<h2>ARO — próximamente</h2>} />
           <Route path="/simuv" element={<h2>SIMUV — próximamente</h2>} />
+          <Route path="/binomio" element={<h2>Binomio — próximamente</h2>} />
         </Routes>
       </div>
     </HashRouter>
