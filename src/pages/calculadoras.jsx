@@ -45,6 +45,23 @@ function parsearFecha(str) {
   return isNaN(fecha) ? null : fecha
 }
 
+function signoZodiacal(fecha) {
+  const mes = fecha.getMonth() + 1
+  const dia = fecha.getDate()
+  if ((mes == 3 && dia >= 21) || (mes == 4 && dia <= 19)) return '♈ Aries'
+  if ((mes == 4 && dia >= 20) || (mes == 5 && dia <= 20)) return '♉ Tauro'
+  if ((mes == 5 && dia >= 21) || (mes == 6 && dia <= 20)) return '♊ Géminis'
+  if ((mes == 6 && dia >= 21) || (mes == 7 && dia <= 22)) return '♋ Cáncer'
+  if ((mes == 7 && dia >= 23) || (mes == 8 && dia <= 22)) return '♌ Leo'
+  if ((mes == 8 && dia >= 23) || (mes == 9 && dia <= 22)) return '♍ Virgo'
+  if ((mes == 9 && dia >= 23) || (mes == 10 && dia <= 22)) return '♎ Libra'
+  if ((mes == 10 && dia >= 23) || (mes == 11 && dia <= 21)) return '♏ Escorpio'
+  if ((mes == 11 && dia >= 22) || (mes == 12 && dia <= 21)) return '♐ Sagitario'
+  if ((mes == 12 && dia >= 22) || (mes == 1 && dia <= 19)) return '♑ Capricornio'
+  if ((mes == 1 && dia >= 20) || (mes == 2 && dia <= 18)) return '♒ Acuario'
+  return '♓ Piscis'
+}
+
 function Calculadoras() {
   const [fur, setFur] = useState('')
   const [resultado, setResultado] = useState(null)
@@ -78,12 +95,14 @@ function Calculadoras() {
     else if (semanas < 28) ganancia = '4 - 7 kg'
     else if (semanas < 36) ganancia = '7 - 10 kg'
     else ganancia = '9 - 12 kg'
-    
+
     let au
     if (semanas < 12) au = 'No palpable aún'
     else au = `${semanas - 2} - ${semanas + 2} cm`
 
-    setResultado({ semanas, dias, fpp, diasFaltan, trimestre, ganancia, au, peso: pesoRango(semanas) })
+    const signo = signoZodiacal(fpp)
+
+    setResultado({ semanas, dias, fpp, diasFaltan, trimestre, ganancia, au, peso: pesoRango(semanas), signo })
   }
 
   return (
@@ -113,9 +132,10 @@ function Calculadoras() {
           <p>⚖️ <strong>Ganancia de peso esperada:</strong> {resultado.ganancia}</p>
           <p>📏 <strong>AU estimada:</strong> {resultado.au}</p>
           <p>👶 <strong>Peso fetal (rango referencial):</strong> {resultado.peso}</p>
+          <p>✨ <strong>Signo zodiacal estimado:</strong> {resultado.signo}</p>
           <img src={tablaAU} alt="Tabla altura uterina" style={{ maxWidth: '500px', width: '120%', height: 'auto', borderRadius: '8px', marginTop: '1rem' }} />
-         <img src={PercentilPesoFetal} alt="Tabla peso fetal" style={{ maxWidth: '500px', width: '100%', height: 'auto', borderRadius: '8px', marginTop: '1rem' }} />
-         </div>
+          <img src={PercentilPesoFetal} alt="Tabla peso fetal" style={{ maxWidth: '500px', width: '100%', height: 'auto', borderRadius: '8px', marginTop: '1rem' }} />
+        </div>
       )}
     </div>
   )

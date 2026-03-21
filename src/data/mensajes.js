@@ -1,4 +1,4 @@
-const mensajes = [
+export const mensajes = [
   "Vas a ser una matrona increíble {nombre}!",
   "Un turno a la vez {nombre} 💪",
   "Hoy vas a aprender algo nuevo {nombre}!",
@@ -8,6 +8,8 @@ const mensajes = [
   "Recuerda cuidar de ti también {nombre} 💖",
   "Cada experiencia te hace mejor {nombre}!",
   "{nombre}, mantén la calma y sigue adelante, lo estás haciendo genial!",
-]
+  "Eres muy inteligente, no te rindas!",
+  "Un paso a la vez {nombre}, estás haciendo un gran trabajo!",
+  ]
 
 export default mensajes

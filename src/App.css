@@ -3,11 +3,14 @@
   padding: 0;
   text-align: center;
   width: 100%;
+  background-color: #faf3f3e0;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
 
 @media (max-width: 600px) {
   #root {
-    padding: 10px;
+    padding:0px;
   }
   h1 {
     font-size: 1.5em;
@@ -27,4 +30,7 @@ button {
 
 button:hover {
   background-color: #ad1457;
+}
+body {
+  background-color: #fcf4dfe0;
 }
