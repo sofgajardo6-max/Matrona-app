@@ -1,15 +1,17 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import favicon from '/favicon.png'
+import { useNavigate } from 'react-router-dom'
 
 function Navbar() {
   const [abierto, setAbierto] = useState(false)
+  const navigate = useNavigate()
 
   return (
     <nav style={{ background: '#e0578e', padding: '1rem', margin: '0' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <span style={{ color: 'white', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '1.25rem' }}>
-  <img src={favicon} style={{ width: '80px', height: '80px' }} />
+  <img src={favicon} onClick={() => navigate('/')} style={{ width: '80px', height: '80px', cursor: 'pointer' }} />
   MatronaApp
 </span>     <button
           onClick={() => setAbierto(!abierto)}
