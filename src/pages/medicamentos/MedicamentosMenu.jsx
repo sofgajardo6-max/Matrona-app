@@ -2,10 +2,10 @@ import { useNavigate } from 'react-router-dom'
 
 const categorias = [
   {
-    to: '/medicamentos/obstetricia',
+    to: '/medicamentos/pre-parto',
     emoji: '🤰',
-    titulo: 'Obstetricia',
-    descripcion: 'Medicamentos para el manejo obstétrico',
+    titulo: 'Pre-Parto',
+    descripcion: 'Medicamentos para el manejo de pre-parto',
     gradiente: 'linear-gradient(135deg, #c2185b, #e91e8c)'
   },
   {

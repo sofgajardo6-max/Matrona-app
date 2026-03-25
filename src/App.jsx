@@ -4,9 +4,10 @@ import './App.css'
 import Calculadoras from './pages/calculadoras'
 import Navbar from './components/navbar'
 import Home from './pages/Home'
-import Medicamentos from './pages/Medicamentos'
+import Medicamentos from './pages/medicamentos/MedicamentosMenu'
 import Checklists from './pages/checklists'
 import RegistroARO from './pages/checklists/checklistARO'
+import MedicamentosGinecologia from './pages/medicamentos/MedicamentosGinecologia'
 
 function App() {
   const [nombre, setNombre] = useState(localStorage.getItem('nombre') || '')
@@ -47,8 +48,8 @@ function App() {
           <Route path="/simuv" element={<h2>SIMUV — próximamente</h2>} />
           <Route path="/binomio" element={<h2>Binomio — próximamente</h2>} />
           <Route path="/medicamentos" element={<Medicamentos />} />
-          <Route path="/medicamentos/obstetricia" element={<h2>Obstetricia — próximamente</h2>} />
-          <Route path="/medicamentos/ginecologia" element={<h2>Ginecología — próximamente</h2>} />
+          <Route path="/medicamentos/pre-parto" element={<h2>Pre-Parto — próximamente</h2>} />
+          <Route path="/medicamentos/ginecologia" element={<MedicamentosGinecologia />} />
           <Route path="/medicamentos/neonatologia" element={<h2>Neonatología — próximamente</h2>} />
           <Route path="/medicamentos/aro" element={<h2>ARO — próximamente</h2>} />
           <Route path="/medicamentos/urgencias" element={<h2>Urgencias — próximamente</h2>} />
