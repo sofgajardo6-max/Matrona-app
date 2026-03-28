@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Matrona-app/'
+  base: 'p-20256-x-v1'
 })
