@@ -6,22 +6,22 @@ const cards = [
     emoji: '🤰',
     titulo: 'Calculadora Obstétrica',
     descripcion: 'FPP, edad gestacional, altura uterina y más',
-    color: '#4d192e',
-    gradiente: 'linear-gradient(135deg, #b60a0a, #f13f83)'
+    color: '#6e1f3f',
+    gradiente: 'linear-gradient(135deg, #b11818, #f13f83)'
   },
   {
     to: '/medicamentos',
     emoji: '💊',
     titulo: 'Medicamentos',
-    descripcion: 'Dosis y referencias de medicamentos frecuentes',
+    descripcion: 'Dosis de medicamentos frecuentes',
     color: '#1565c0',
     gradiente: 'linear-gradient(135deg, #204064, #42a5f5)'
   },
   {
     to: '/checklists',
     emoji: '✅',
-    titulo: 'Checklists',
-    descripcion: 'Listas de verificación para cada situación clínica',
+    titulo: 'Registro Diario',
+    descripcion: 'Registro de actividades clinicas diarias o semanales',
     color: '#7b1fa2',
     gradiente: 'linear-gradient(135deg, #3b0e4e, #ab47bc)'
   }
